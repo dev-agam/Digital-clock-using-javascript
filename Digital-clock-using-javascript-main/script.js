@@ -3,6 +3,7 @@ function clock() {
 
     let hour = time.getHours(),
         min = time.getMinutes(),
+        sec = time.getSeconds(),
         am_pm = "AM";
 
     var timeHtml = document.querySelector("#time");
@@ -20,7 +21,7 @@ function clock() {
         min = min < 10 ? "0" + min : min;
     }
 
-    var current_time = hour + " : " + min + " " + am_pm;
+    var current_time = hour + " : " + min + " : " + sec + " " + am_pm;
     timeHtml.innerHTML = current_time;    
 
 }
